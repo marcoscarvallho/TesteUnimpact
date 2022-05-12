@@ -1,4 +1,5 @@
 from selenium import webdriver
+import time
 
 class CadastroPessoaFisica():
     
@@ -8,11 +9,13 @@ class CadastroPessoaFisica():
 
     def inicioCadastro (self):
         self.driver.find_element_by_xpath('//span[contains(text(), "Cadastro")]').click()
+        time.sleep(1)
         self.driver.find_element_by_xpath('//div[contains(text(), "Pessoa Física")]').click()
         self.inserirInputs()
         self.inserirTelefone()
         self.inserirDocumento()
         self.driver.find_element_by_xpath('//span[contains(text(), "Salvar")]').click()  
+        print ("final cadastro pessoa fisica")
 
     def inserirInputs(self):
         campoLogin = self.driver.find_element_by_id('login')
