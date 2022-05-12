@@ -10,6 +10,7 @@ class CadastroPessoaFisica():
         self.driver.find_element_by_xpath('//div[contains(text(), "Pessoa Física")]').click()
         self.inserirInputs()
         self.inserirTelefone()
+        self.inserirDocumento()
 
     def inserirInputs(self):
         campoLogin = self.driver.find_element_by_id('login')
@@ -32,6 +33,11 @@ class CadastroPessoaFisica():
         campoTelefone = self.driver.find_element_by_id('telefone')
         campoTelefone.clear()
         campoTelefone.send_keys('+5581998329317')
+
+    def inserirDocumento(self):
+        inputFiles = self.driver.find_elements_by_xpath("//input[@type='file']")
+        for x in range(len(inputFiles)):
+            inputFiles[x].send_keys("C:\\Users\\moaci\\OneDrive\\Área de Trabalho\\tcc marcos\\TesteUnimpact\\Testes\\imgtest.jpg")
 
     
 
