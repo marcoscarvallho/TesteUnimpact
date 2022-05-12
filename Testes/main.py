@@ -1,6 +1,5 @@
 from selenium import webdriver
 import time
-
 from cadastroPessoaFisica import CadastroPessoaFisica
 
 driver = webdriver.Chrome()
