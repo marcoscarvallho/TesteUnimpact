@@ -12,7 +12,6 @@ class CadastroPessoaJuridica():
         self.driver.find_element_by_xpath('//span[contains(text(), "Cadastro")]').click()
         time.sleep(1)
         self.driver.find_element_by_xpath('//div[contains(text(), "Pessoa Jurídica")]').click()
-        time.sleep(2)
         self.inserirInputs()
         self.inserirImagens()
         self.inserirSelect()
@@ -38,6 +37,7 @@ class CadastroPessoaJuridica():
         self.driver.find_element_by_id("cargo").send_keys("testeCargo")
 
     def inserirImagens(self):
-        inputImagens = self.driver.find_elements_by_xpath("//input[@type='file']")
-        for x in range(len(inputImagens)):
-            inputImagens[x].send_keys("C:\\Users\\moaci\\OneDrive\\Área de Trabalho\\tcc marcos\\TesteUnimpact\\Testes\\imgtest.jpg")
+        # inputImagens = self.driver.find_elements_by_xpath("//input[@type='file']")
+        # for x in range(len(inputImagens)):
+        #     inputImagens[x].send_keys("C:\\Users\\moaci\\OneDrive\\Área de Trabalho\\tcc marcos\\TesteUnimpact\\Testes\\imgtest.jpg")
+        print("batata")

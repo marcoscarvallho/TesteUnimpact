@@ -1,4 +1,4 @@
-from selenium import webdriver
+import time
 
 class CadastroPessoaFisica():
     
@@ -7,6 +7,8 @@ class CadastroPessoaFisica():
         self.inicioCadastro()
 
     def inicioCadastro (self):
+        self.driver.find_element_by_xpath('//span[contains(text(), "Cadastro")]').click()
+        time.sleep(1)
         self.driver.find_element_by_xpath('//div[contains(text(), "Pessoa Física")]').click()
         self.inserirInputs()
         self.inserirTelefone()
@@ -35,11 +37,10 @@ class CadastroPessoaFisica():
         campoTelefone.send_keys('+5581998329317')
 
     def inserirDocumento(self):
-        inputFiles = self.driver.find_elements_by_xpath("//input[@type='file']")
-        for x in range(len(inputFiles)):
-            inputFiles[x].send_keys("C:\\Users\\moaci\\OneDrive\\Área de Trabalho\\tcc marcos\\TesteUnimpact\\Testes\\imgtest.jpg")
-
-    
+        # inputFiles = self.driver.find_elements_by_xpath("//input[@type='file']")
+        # for x in range(len(inputFiles)):
+        #     inputFiles[x].send_keys("C:\\Users\\moaci\\OneDrive\\Área de Trabalho\\tcc marcos\\TesteUnimpact\\Testes\\imgtest.jpg")
+        print ("batatadoce")
 
 
 
