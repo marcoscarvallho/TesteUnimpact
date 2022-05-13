@@ -13,11 +13,13 @@ class CadastroPessoaFisica():
         self.inserirInputs()
         self.inserirTelefone()
         self.inserirDocumento()
+        # self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        # self.driver.find_element_by_xpath('//div[contains(text(), "Salvar")]').click()
 
     def inserirInputs(self):
         campoLogin = self.driver.find_element_by_id('login')
         campoLogin.clear()
-        campoLogin.send_keys('teste')
+        campoLogin.send_keys('teste1212')
         campoSenha = self.driver.find_element_by_id('password')
         campoSenha.clear()
         campoSenha.send_keys('teste2')
@@ -37,9 +39,9 @@ class CadastroPessoaFisica():
         campoTelefone.send_keys('+5581998329317')
 
     def inserirDocumento(self):
-        # inputFiles = self.driver.find_elements_by_xpath("//input[@type='file']")
-        # for x in range(len(inputFiles)):
-        #     inputFiles[x].send_keys("C:\\Users\\moaci\\OneDrive\\Área de Trabalho\\tcc marcos\\TesteUnimpact\\Testes\\imgtest.jpg")
+        inputFiles = self.driver.find_elements_by_xpath("//input[@type='file']")
+        for x in range(len(inputFiles)):
+            inputFiles[x].send_keys("C:\\Us ers\\moaci\\OneDrive\\Área de Trabalho\\tcc marcos\\TesteUnimpact\\Testes\\imgtest.jpg")
         print ("batatadoce")
 
 
