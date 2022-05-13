@@ -5,6 +5,7 @@ from cadastroPessoaFisica import CadastroPessoaFisica
 from login import Login
 from pesquisarDemanda import PesquisarDemanda
 from fazerProposta import FazerProposta
+from pesquisarEmpresa import PesquisarDemanda
 
 options = webdriver.ChromeOptions() 
 options.add_argument("start-maximized")
@@ -15,4 +16,5 @@ Login(driver)
 # CadastroPessoaFisica(driver)
 # CadastroPessoaJuridica(driver)
 # PesquisarDemanda(driver)
-FazerProposta(driver)
+# FazerProposta(driver)
+# PesquisarDemanda(driver)
