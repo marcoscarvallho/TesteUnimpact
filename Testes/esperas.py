@@ -12,6 +12,9 @@ class Esperas():
             resposta = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, xpath))
             )
+        except:
+            print("Erro, busca nao encontrada")
+            self.driver.close()
         finally:
             return resposta
 
@@ -20,5 +23,8 @@ class Esperas():
             resposta = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.ID, id))
             )
+        except:
+            print("Erro, busca nao encontrada")
+            self.driver.close()
         finally:
             return resposta
