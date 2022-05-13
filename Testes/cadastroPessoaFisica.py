@@ -23,7 +23,7 @@ class CadastroPessoaFisica():
         campoSenha.send_keys('teste2')
         campoEmail = self.driver.find_element_by_id('email')
         campoEmail.clear()
-        campoEmail.send_keys('Email')
+        campoEmail.send_keys('Email@a')
         campoNome = self.driver.find_element_by_id('nome')
         campoNome.clear()
         campoNome.send_keys('Testinho bonitinho')
