@@ -13,8 +13,8 @@ class CadastroPessoaJuridica():
         self.inserirInputs()
         self.inserirImagens()
         self.inserirSelect()
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        self.driver.find_element_by_xpath('//div[contains(text(), "Salvar")]').click()
+        # self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        # self.driver.find_element_by_xpath('//div[contains(text(), "Salvar")]').click()
 
     def inserirSelect(self):
         element = self.driver.find_element_by_name("tipoInstituicao")

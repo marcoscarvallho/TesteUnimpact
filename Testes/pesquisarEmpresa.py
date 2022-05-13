@@ -1,7 +1,7 @@
 from esperas import Esperas
 import time
 
-class PesquisarDemanda():
+class PesquisarEmpresa():
     def __init__(self, driver):
         self.driver = driver
         self.fazerPesquisa()

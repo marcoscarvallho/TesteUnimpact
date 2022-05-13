@@ -5,7 +5,7 @@ from cadastroPessoaFisica import CadastroPessoaFisica
 from login import Login
 from pesquisarDemanda import PesquisarDemanda
 from fazerProposta import FazerProposta
-from pesquisarEmpresa import PesquisarDemanda
+from pesquisarEmpresa import PesquisarEmpresa
 from editarPerfil import EditarPerfil
 from aceitarProposta import AceitarProposta
 from acompanharDemandas import AcompanharDemandas
@@ -22,7 +22,7 @@ Login(driver)
 # CadastroPessoaJuridica(driver)
 # PesquisarDemanda(driver)
 # FazerProposta(driver)
-# PesquisarDemanda(driver)
+# PesquisarEmpresa(driver)
 # EditarPerfil(driver)
 # AcompanharDemandas(driver ,'aa')
 # AceitarProposta(driver)
