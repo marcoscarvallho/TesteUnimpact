@@ -3,11 +3,16 @@ import time
 from cadastroPessoaJuridica import CadastroPessoaJuridica
 from cadastroPessoaFisica import CadastroPessoaFisica
 from login import Login
+from pesquisarDemanda import PesquisarDemanda
+from fazerProposta import FazerProposta
 
-driver = webdriver.Chrome()
+options = webdriver.ChromeOptions() 
+options.add_argument("start-maximized")
+driver = webdriver.Chrome(options=options)
 driver.get('https://unimpact2.herokuapp.com/lista-demandas')
-time.sleep(5)
 
+Login(driver)
 # CadastroPessoaFisica(driver)
 # CadastroPessoaJuridica(driver)
-Login(driver)
+# PesquisarDemanda(driver)
+FazerProposta(driver)
