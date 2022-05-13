@@ -10,6 +10,7 @@ from editarPerfil import EditarPerfil
 from aceitarProposta import AceitarProposta
 from acompanharDemandas import AcompanharDemandas
 from apagarDemanda import ApagarDemanda
+from cadastrarDemanda import CadastrarDemanda
 
 
 options = webdriver.ChromeOptions() 
@@ -26,6 +27,7 @@ Login(driver)
 # EditarPerfil(driver)
 # AcompanharDemandas(driver ,'aa')
 # AceitarProposta(driver)
-ApagarDemanda(driver)
+# ApagarDemanda(driver)
+CadastrarDemanda(driver, 'teste12', 'descricao', '04061997')
 
 # driver.close()
