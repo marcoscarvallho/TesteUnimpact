@@ -9,7 +9,7 @@ class ApagarDemanda():
         self.apagar()
     
     def apagar(self):
-        AcompanharDemandas(self.driver, 'aa')
+        AcompanharDemandas(self.driver, 'teste12')
         time.sleep(1)
         botaoApagar = Esperas.porXpath(self, '//span[contains(text(), "Apagar")]')
         botaoApagar.click()
