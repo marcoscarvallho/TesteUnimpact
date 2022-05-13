@@ -8,6 +8,6 @@ class Login():
     
     def inicioLogin(self):
         inputLogin = Esperas.porId(self, "login")
-        inputLogin.send_keys("juliaamato10@gmail.com")
-        self.driver.find_element_by_id("password").send_keys("123456")
+        inputLogin.send_keys("testeLogin")
+        self.driver.find_element_by_id("password").send_keys("testeSenha")
         self.driver.find_element_by_xpath('//span[contains(text(), "Entrar")]').click()

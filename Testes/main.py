@@ -11,6 +11,7 @@ from aceitarProposta import AceitarProposta
 from acompanharDemandas import AcompanharDemandas
 from apagarDemanda import ApagarDemanda
 from cadastrarDemanda import CadastrarDemanda
+from editarDemanda import EditarDemanda
 
 options = webdriver.ChromeOptions() 
 options.add_argument("start-maximized")
@@ -26,7 +27,8 @@ Login(driver)
 # EditarPerfil(driver)
 # AcompanharDemandas(driver ,'aa')
 # AceitarProposta(driver)
-ApagarDemanda(driver)
+# ApagarDemanda(driver)
+EditarDemanda(driver)
 # CadastrarDemanda(driver, 'teste12', 'descricao', '04061997')
 
 # driver.close()
