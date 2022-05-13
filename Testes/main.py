@@ -12,7 +12,6 @@ from acompanharDemandas import AcompanharDemandas
 from apagarDemanda import ApagarDemanda
 from cadastrarDemanda import CadastrarDemanda
 
-
 options = webdriver.ChromeOptions() 
 options.add_argument("start-maximized")
 driver = webdriver.Chrome(options=options)
