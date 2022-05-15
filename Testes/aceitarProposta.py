@@ -4,12 +4,13 @@ from selenium.webdriver.common.alert import Alert
 import time
 
 class AceitarProposta():
-    def __init__(self, driver):
+    def __init__(self, driver, demanda):
         self.driver = driver
-        self.aceitar()
+        self.aceitar(demanda)
     
-    def aceitar(self):
-        AcompanharDemandas(self.driver, 'cc')
+    def aceitar(self, demanda):
+        AcompanharDemandas(self.driver, demanda)
+        time.sleep(1)
         botaoPropostas = Esperas.porXpath(self, '//p[contains(text(), "Propostas:")]/..')
         time.sleep(1)
         botaoPropostas.click()

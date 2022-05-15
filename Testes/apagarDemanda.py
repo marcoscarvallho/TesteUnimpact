@@ -4,12 +4,12 @@ import time
 from acompanharDemandas import AcompanharDemandas
 
 class ApagarDemanda():
-    def __init__(self, driver):
+    def __init__(self, driver, demanda):
         self.driver = driver
-        self.apagar()
+        self.apagar(demanda)
     
-    def apagar(self):
-        AcompanharDemandas(self.driver, 'teste12')
+    def apagar(self, demanda):
+        AcompanharDemandas(self.driver, demanda)
         time.sleep(1)
         botaoApagar = Esperas.porXpath(self, '//span[contains(text(), "Apagar")]')
         botaoApagar.click()
