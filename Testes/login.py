@@ -2,12 +2,12 @@ from esperas import Esperas
 
 class Login():
 
-    def __init__(self, driver):
+    def __init__(self, driver, login, senha):
         self.driver = driver
-        self.inicioLogin()
+        self.inicioLogin(login, senha)
     
-    def inicioLogin(self):
+    def inicioLogin(self, login, senha):
         inputLogin = Esperas.porId(self, "login")
-        inputLogin.send_keys("testeLogin")
-        self.driver.find_element_by_id("password").send_keys("testeSenha")
+        inputLogin.send_keys(login)
+        self.driver.find_element_by_id("password").send_keys(senha)
         self.driver.find_element_by_xpath('//span[contains(text(), "Entrar")]').click()
