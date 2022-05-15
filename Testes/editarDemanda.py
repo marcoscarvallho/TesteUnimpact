@@ -32,3 +32,4 @@ class EditarDemanda():
             togle.click()
         criar = modalContainerAux.find_element_by_xpath('//span[contains(text(), "Salvar")]')
         criar.click()
+        time.sleep(0.5)

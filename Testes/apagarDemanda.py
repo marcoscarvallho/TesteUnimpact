@@ -15,3 +15,4 @@ class ApagarDemanda():
         botaoApagar.click()
         botaoConfirmar = Esperas.porXpath(self, '//span[contains(text(), "Confirmar")]')
         botaoConfirmar.click()
+        time.sleep(0.5)
