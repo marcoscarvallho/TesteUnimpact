@@ -1,5 +1,6 @@
 import time
 from cadastroPessoaFisica import CadastroPessoaFisica
+from esperas import Esperas
 
 class CadastroPessoaJuridica():
 
@@ -16,7 +17,12 @@ class CadastroPessoaJuridica():
         self.inserirImagens()
         self.inserirSelect()
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        # self.driver.find_element_by_xpath('//div[contains(text(), "Salvar")]').click()
+        self.driver.find_element_by_xpath('//div[contains(text(), "Salvar")]').click()
+        time.sleep(2)
+        x = Esperas.porXpath(self, '//span[contains(text(), "Entrar")]')
+        print (x)
+        assert x != None, 'Falha no cadastro'
+        print('Cadastrado com sucesso')
 
     def inserirSelect(self):
         element = self.driver.find_element_by_name("tipoInstituicao")

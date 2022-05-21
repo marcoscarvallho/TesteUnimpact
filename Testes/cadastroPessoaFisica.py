@@ -1,4 +1,5 @@
 import time
+from esperas import Esperas
 
 class CadastroPessoaFisica():
     
@@ -15,6 +16,11 @@ class CadastroPessoaFisica():
         self.inserirDocumento()
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         self.driver.find_element_by_xpath('//span[contains(text(), "Salvar")]').click()
+        time.sleep(2)
+        x = Esperas.porXpath(self, '//span[contains(text(), "Entrar")]')
+        print (x)
+        assert x != None, 'Falha no cadastro'
+        print('Cadastrado com sucesso')
 
     def inserirInputs(self, login, senha, email, nome, cpf):
         campoLogin = self.driver.find_element_by_id('login')
@@ -41,7 +47,7 @@ class CadastroPessoaFisica():
     def inserirDocumento(self):
         inputFiles = self.driver.find_elements_by_xpath("//input[@type='file']")
         for x in range(len(inputFiles)):
-            inputFiles[x].send_keys("C:\\Users\\moaci\\OneDrive\\Área de Trabalho\\tcc marcos\\TesteUnimpact\\Testes\\imgtest.jpg")
+            inputFiles[x].send_keys("C:\\Users\\marcu\\OneDrive\\Área de Trabalho\\TesteUnimpact\\Testes\\imgtest.jpg")
 
 
 

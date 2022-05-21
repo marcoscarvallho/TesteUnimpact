@@ -32,4 +32,13 @@ class EditarDemanda():
             togle.click()
         criar = modalContainerAux.find_element_by_xpath('//span[contains(text(), "Salvar")]')
         criar.click()
-        time.sleep(0.5)
+        time.sleep(2)
+        AcompanharDemandas(self.driver, titulo)
+        time.sleep(2)
+        try:
+            x = self.driver.find_element_by_xpath('//p[contains(text(), "'+titulo+'")]')
+        except:
+            x = None
+        print (x)
+        assert x != None, 'Falha na edição da demanda'
+        print('Editado com sucesso')

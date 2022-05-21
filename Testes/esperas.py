@@ -14,7 +14,8 @@ class Esperas():
             )
         except:
             print("Erro, busca nao encontrada")
-            self.driver.close()
+            # self.driver.close()
+            resposta = None
         finally:
             return resposta
 
@@ -25,6 +26,7 @@ class Esperas():
             )
         except:
             print("Erro, busca nao encontrada")
-            self.driver.close()
+            # self.driver.close()
+            resposta = None
         finally:
             return resposta

@@ -19,4 +19,8 @@ class CadastrarDemanda():
             self.driver.find_element_by_id("dataLimite").send_keys(data)
         self.driver.find_element_by_id("ofereceInvestimento").click()
         self.driver.find_element_by_xpath("//span[contains(text(),'Salvar')]").click()
-        time.sleep(0.5)
+        time.sleep(5)
+        x = Esperas.porXpath(self, '//span[contains(text(), "Logout")]')
+        print (x)
+        assert x != None, 'Falha ao cadastrar demanda'
+        print('Demanda cadastrada com sucesso')
