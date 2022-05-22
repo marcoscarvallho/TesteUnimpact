@@ -13,8 +13,7 @@ class Esperas():
                 EC.presence_of_element_located((By.XPATH, xpath))
             )
         except:
-            print("Erro, busca nao encontrada")
-            # self.driver.close()
+            # print("Erro, busca nao encontrada")
             resposta = None
         finally:
             return resposta
@@ -25,8 +24,7 @@ class Esperas():
                 EC.presence_of_element_located((By.ID, id))
             )
         except:
-            print("Erro, busca nao encontrada")
-            # self.driver.close()
+            # print("Erro, busca nao encontrada")
             resposta = None
         finally:
             return resposta

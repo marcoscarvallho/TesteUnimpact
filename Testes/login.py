@@ -13,6 +13,5 @@ class Login():
         self.driver.find_element_by_id("password").send_keys(senha)
         self.driver.find_element_by_xpath('//span[contains(text(), "Entrar")]').click()
         x = Esperas.porXpath(self, '//span[contains(text(), "Logout")]')
-        print (x)
         assert x != None, 'Falha no login'
         print('Logado com sucesso')

@@ -35,10 +35,6 @@ class EditarDemanda():
         time.sleep(2)
         AcompanharDemandas(self.driver, titulo)
         time.sleep(2)
-        try:
-            x = self.driver.find_element_by_xpath('//p[contains(text(), "'+titulo+'")]')
-        except:
-            x = None
-        print (x)
+        x = Esperas.porXpath(self, '//p[contains(text(), "'+titulo+'")]')
         assert x != None, 'Falha na edição da demanda'
         print('Editado com sucesso')

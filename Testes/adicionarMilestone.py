@@ -19,10 +19,6 @@ class AdicionarMilestone():
         self.driver.find_element_by_xpath('//span[contains(text(), "Salvar")]').click()
         time.sleep(0.5)
         time.sleep(1)
-        try:
-            x = self.driver.find_element_by_xpath('//div[contains(text(), "adicionada com sucesso")]')
-        except:
-            x = None
-        print (x)
+        x = Esperas.porXpath(self, '//div[contains(text(), "adicionada com sucesso")]')
         assert x == None, 'Falha ao adicionar'
         print('Milestone adicionada com sucesso')

@@ -26,3 +26,6 @@ class FazerProposta():
             togle.click()
         criar = modalContainerAux.find_element_by_xpath('//span[contains(text(), "Criar")]')
         criar.click()
+        x = Esperas.porXpath(self, '//[contains(text(), "Proposta criada com sucesso! Aguarde retorno do demandante.")]')
+        assert x == None, 'Falha ao fazer proposta'
+        print('proposta cadastrada com sucesso')

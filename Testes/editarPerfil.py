@@ -28,3 +28,6 @@ class EditarPerfil():
         botoes = self.driver.find_elements_by_tag_name("button")
         print(len(botoes))
         self.driver.find_elements_by_tag_name("button")[1].click()
+        x = Esperas.porXpath(self, '//[contains(text(), "Usuário editado com sucesso!")]')
+        assert x == None, 'Falha ao editar usuario'
+        print('Usuario editado com sucesso')

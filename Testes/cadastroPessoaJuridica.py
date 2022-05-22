@@ -20,7 +20,6 @@ class CadastroPessoaJuridica():
         self.driver.find_element_by_xpath('//div[contains(text(), "Salvar")]').click()
         time.sleep(2)
         x = Esperas.porXpath(self, '//span[contains(text(), "Entrar")]')
-        print (x)
         assert x != None, 'Falha no cadastro'
         print('Cadastrado com sucesso')
 

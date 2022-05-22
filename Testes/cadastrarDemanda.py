@@ -21,6 +21,5 @@ class CadastrarDemanda():
         self.driver.find_element_by_xpath("//span[contains(text(),'Salvar')]").click()
         time.sleep(5)
         x = Esperas.porXpath(self, '//span[contains(text(), "Logout")]')
-        print (x)
         assert x != None, 'Falha ao cadastrar demanda'
         print('Demanda cadastrada com sucesso')

@@ -15,11 +15,6 @@ class ApagarDemanda():
         botaoApagar.click()
         botaoConfirmar = Esperas.porXpath(self, '//span[contains(text(), "Confirmar")]')
         botaoConfirmar.click()
-        time.sleep(1)
-        try:
-            x = self.driver.find_element_by_xpath('//div[contains(text(), "apagada com sucesso")]')
-        except:
-            x = None
-        print (x)
+        x = Esperas.porXpath(self, '//[contains(text(), "apagada com sucesso")]')
         assert x == None, 'Falha ao deletar a demanda'
         print('Deletado com sucesso')
