@@ -18,9 +18,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
         pip install selenium
-    # - name: checar
-    #   run: 
-    #     cd Testes
     - name: Test
       run: |
         cd Testes
