@@ -1,4 +1,3 @@
-from pickle import NONE
 from esperas import Esperas
 from selenium import webdriver
 
@@ -28,4 +27,3 @@ class FazerProposta():
         criar.click()
         x = Esperas.porXpath(self, '//[contains(text(), "Proposta criada com sucesso! Aguarde retorno do demandante.")]')
         assert x == None, 'Falha ao fazer proposta'
-        print('proposta cadastrada com sucesso')
