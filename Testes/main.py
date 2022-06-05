@@ -3,6 +3,7 @@ import time
 from cadastroPessoaJuridica import CadastroPessoaJuridica
 from cadastroPessoaFisica import CadastroPessoaFisica
 from login import Login
+from esperas import Esperas
 from pesquisarDemanda import PesquisarDemanda
 from fazerProposta import FazerProposta
 from pesquisarEmpresa import PesquisarEmpresa
@@ -20,7 +21,11 @@ class Main():
     options = webdriver.ChromeOptions() 
     options.add_argument("start-maximized")
     driver = webdriver.Chrome(options=options)
-    driver.get('https://unimpact2.herokuapp.com/lista-demandas')
+    driver.get('https://unimpact2.herokuapp.com/login')
+    resp = Esperas.porId(driver, "login")
+    if resp == None:
+        driver.get('https://unimpact2.herokuapp.com/login')
+        resp = Esperas.porId(driver, "login")
     # CadastroPessoaFisica(driver, 'aaaa', 'teste1', '人t123@ll', '人testandinho', '人11237666666', '人81995688622')
     # CadastroPessoaJuridica(driver, 'testecnpj', 'senhacnpj', 'email@cnpj', 'nomecnpj', 'razaocnpj', '81994588543', 'institutoo', '12312312312312', 'razaoempresa', 'vagabundo')
     Login(driver, 'testeLogin', 'testeSenha')
@@ -35,8 +40,6 @@ class Main():
     # EditarDemanda(driver, 'demandada', 'deu certo', 'erro', '04061997')
     # AdicionarMilestone(driver, 'demandada', 'vamos adicionar', 'descricao vem bem aqui')
     # ApagarDemanda(driver, 'Teste título')
-    # time.sleep(5)
-    # Logout(driver)
-    # time.sleep(3)
-    # driver.close()
+    Logout(driver)
+    driver.close()
 
