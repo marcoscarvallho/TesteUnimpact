@@ -4,4 +4,4 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: ./../../Testes/run.py
+      - run: ./../../Testes/main.py
