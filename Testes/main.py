@@ -41,6 +41,7 @@ class Main():
     # EditarDemanda(driver, 'Criado pelo git', 'Criado pelo git', 'git actionss', '04061997')
     # AdicionarMilestone(driver, 'demandada', 'vamos adicionar', 'descricao vem bem aqui')
     # ApagarDemanda(driver, 'Teste título')
+    time.sleep(5)
     Logout(driver)
     driver.close()
 
