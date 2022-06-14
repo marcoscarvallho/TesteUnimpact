@@ -10,8 +10,9 @@ class ApagarDemanda():
     
     def apagar(self, demanda):
         AcompanharDemandas(self.driver, demanda)
-        time.sleep(1)
-        botaoApagar = Esperas.porXpath(self, '//span[contains(text(), "Apagar")]')
+        time.sleep(3)
+        botaoApagar = Esperas.porXpath(self, '//span[contains(text(), "")]')
+        assert botaoApagar == None, 'Falha ao deletar a demanda'
         botaoApagar.click()
         botaoConfirmar = Esperas.porXpath(self, '//span[contains(text(), "Confirmar")]')
         botaoConfirmar.click()
