@@ -38,7 +38,7 @@ class Main():
     # AceitarProposta(driver, 'data invalida')
     # CadastrarDemanda(driver, 'Criado pelo git', 'git actions', '04061997')
     ApagarDemanda(driver, 'Criado pelo git')
-    # EditarDemanda(driver, 'demandada', 'deu certo', 'erro', '04061997')
+    # EditarDemanda(driver, 'Criado pelo git', 'Criado pelo git', 'git actionss', '04061997')
     # AdicionarMilestone(driver, 'demandada', 'vamos adicionar', 'descricao vem bem aqui')
     # ApagarDemanda(driver, 'Teste título')
     Logout(driver)
